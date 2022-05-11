@@ -359,9 +359,9 @@ app.on('connection', connection =>
 app.publish(data => app.channel('everybody'));
 
 // Start the server
-app.listen(3030).on('listening', () =>
-  console.log('Feathers server listening on localhost:3030')
-);
+app.listen(3030, () => {
+    console.log('Feathers server listening on localhost:3030')
+})
 
 // For good measure let's create a message
 // So our API doesn't look so empty
